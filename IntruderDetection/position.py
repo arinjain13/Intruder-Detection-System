@@ -22,7 +22,7 @@ def mouseClick(events, x, y, flags, params):
         pickle.dump(posList, f)
 
 while True:
-    img = cv2.imread('alert /Screenshot 2023-10-30 at 8.33.35 PM.png')
+    img = cv2.imread('/IntruderDetection/source/Screenshot 2023-10-30 at 8.33.35 PM.png')
     for pos in posList:
         cv2.rectangle(img, pos, (pos[0] + width, pos[1] + height), (255, 0, 255), 2) 
 
