@@ -6,9 +6,9 @@ import pickle
 import cvzone
 
 
-video_capture =cv2.VideoCapture('/Users/apple/Documents/Pythonpro/alert /IntruderDetection/source/vid.mov')
+video_capture =cv2.VideoCapture('/IntruderDetection/source/vid.mov')
 
-with open('/Users/apple/Documents/Pythonpro/alert /IntruderDetection/source/IDS', 'rb') as f:
+with open('/IntruderDetection/source/IDS', 'rb') as f:
     posList = pickle.load(f)
 
 width, height = 160,200
@@ -35,10 +35,10 @@ def checkParkingSpace(imgPro):
         cv2.rectangle(frame, pos, (pos[0] + width, pos[1] + height), color, thickness)
         cvzone.putTextRect(frame,str(count),(x,y+height-3), scale = 1, thickness = 2, offset =0,colorR = color)
     if Counter ==1:
-        playsound('/Users/apple/Documents/Pythonpro/alert /IntruderDetection/utils/alert.wav')
+        playsound('/IntruderDetection/utils/alert.wav')
 
-avish_image=face_recognition.load_image_file("/Users/apple/Documents/Pythonpro/alert /IntruderDetection/known_peoples/avish.jpg")
-arin_image = face_recognition.load_image_file("/Users/apple/Documents/Pythonpro/alert /IntruderDetection/known_peoples/arin.jpg")
+avish_image=face_recognition.load_image_file("/IntruderDetection/known_peoples/avish.jpg")
+arin_image = face_recognition.load_image_file("/IntruderDetection/known_peoples/arin.jpg")
 
 
 while True:
